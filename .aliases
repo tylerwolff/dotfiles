@@ -1,0 +1,16 @@
+# git stuff
+alias gst="git status"
+alias glog="git log --format='%Cgreen%H%Creset %C(cyan)%an%Creset - %s' --graph"
+alias undo="git reset --soft 'HEAD^'"
+alias active="git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname)' refs/heads refs/remotes --count=10"
+alias merges='clear && git log --format="%Cgreen%H%Creset %C(cyan)%an%Creset - %s" -100 | grep "Merge pull request"'
+alias standup="git log --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=format:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d' --date=local"
+alias cur="parse_git_branch | sed -e 's/(//g' | sed -e 's/)//g' | tr -d '\n' | pbcopy"
+
+# other devz
+alias be="bundle exec"
+alias sp='be rspec --drb'
+alias serve="python -m SimpleHTTPServer 8080"
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias hosts='sudo $EDITOR /etc/hosts'
