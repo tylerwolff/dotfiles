@@ -20,3 +20,9 @@ In addition, install [brew](https://brew.sh) and run the installation scripts.
 - Install [NVM](https://github.com/nvm-sh/nvm)
 - Install git-up `gem install git-up` for awesome git updates
 - Configure [editor](./atom.md)
+- Add dock spacers
+
+```
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+killall Dock
+```
