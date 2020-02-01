@@ -8,12 +8,9 @@ module.exports = {
     // or `'canary'` for less polished but more frequent updates
     updateChannel: "stable",
 
-    // default font size in pixels for all tabs
-    fontSize: 12,
-
-    // font family with optional fallbacks
     fontFamily:
-      'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+      '"JetBrains Mono", "SF Mono", Menlo, Consolas, DejaVu Sans Mono, monospace',
+    fontSize: 16,
 
     // default font weight: 'normal' or 'bold'
     fontWeight: "normal",
@@ -47,7 +44,7 @@ module.exports = {
     backgroundColor: "#000",
 
     // terminal selection color
-    selectionColor: "rgba(248,28,229,0.3)",
+    selectionColor: "rgba(255,255,255,0.25)",
 
     // border color (window, tabs)
     borderColor: "#333",
@@ -94,17 +91,8 @@ module.exports = {
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
-    //
-    // Windows
-    // - Make sure to use a full path if the binary name doesn't work
-    // - Remove `--login` in shellArgs
-    //
-    // Bash on Windows
-    // - Example: `C:\\Windows\\System32\\bash.exe`
-    //
-    // PowerShell on Windows
-    // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: "",
+    // shell: "/bin/zsh",
+    shell: "/usr/local/Cellar/bash/5.0.11/bin/bash",
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
@@ -126,15 +114,12 @@ module.exports = {
     // selection is present (`true` by default on Windows and disables the context menu feature)
     // quickEdit: true,
 
-    // URL to custom bell
-    // bellSoundURL: 'http://example.com/bell.mp3',
-
     // for advanced config flags please refer to https://hyper.is/#cfg
-    verminal: {
-      fontFamily:
-        '"JetBrains Mono", "SF Mono", Menlo, Consolas, DejaVu Sans Mono, monospace',
-      fontSize: 14
-    },
+    // verminal: {
+    //   fontFamily:
+    //     '"JetBrains Mono", "SF Mono", Menlo, Consolas, DejaVu Sans Mono, monospace',
+    //   fontSize: 15
+    // },
 
     hypercwd: {
       initialWorkingDirectory: "~/Dev"
@@ -143,8 +128,17 @@ module.exports = {
 
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
-  // "hyperocean", "hyper-one-dark"
-  plugins: ["hypercwd", "verminal", "hyper-active-tab"],
+  // "hyper-one-dark",
+  // "verminal"
+  // "hyper-snazzy",
+  // "hyperocean",
+  // "hyper-oceanic-next",
+  plugins: [
+    "hypercwd",
+    "hyper-dracula",
+    "hyper-highlight-active-pane",
+    "hyperterm-tabs"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
