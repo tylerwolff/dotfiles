@@ -5,7 +5,8 @@ gitformat="\
 
 # git stuff
 alias gst="git status"
-alias glog="git log --format='%Cgreen%H%Creset %C(cyan)%an%Creset - %s' --graph"
+# alias glog="git log --format='%Cgreen%H%Creset %C(cyan)%an%Creset - %s' --graph"
+alias glog="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias undo="git reset --soft 'HEAD^'"
 alias active="echo -e '\r' && git for-each-ref --sort='-committerdate' --format='$gitformat' refs/heads --count=15 --color=always | column -ts '|'"
 alias recent="active"
