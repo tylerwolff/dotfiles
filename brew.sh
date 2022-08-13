@@ -15,9 +15,11 @@ brew install spotify
 
 # dev
 brew install atom
+brew install iterm
 brew install imagealpha
 brew install imageoptim
 brew install appcleaner
+brew install postman
 
 # browsers
 brew install google-chrome
