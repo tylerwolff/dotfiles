@@ -1,2 +1,2 @@
 # atom as default
-export EDITOR="atom"
+export EDITOR="code"
