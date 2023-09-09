@@ -1,2 +1,2 @@
-# atom as default
+# vs code as default
 export EDITOR="code"
