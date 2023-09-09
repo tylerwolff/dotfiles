@@ -19,6 +19,7 @@ Run the symlink script.
 - Install [SF Mono](https://developer.apple.com/fonts/)
 - Install [Volta](https://volta.sh/) node manager
 - install [brew](https://brew.sh) and run the installation script `./brew.sh`
+- Install [Rectangle](https://rectangleapp.com/) window manager
 
 ### Extras
 - Add dock spacers
